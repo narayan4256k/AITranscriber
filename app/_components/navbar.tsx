@@ -6,7 +6,7 @@ import { useState } from "react";
 export function NavbarDemo() {
   const navItems = [
     {
-      name: "Features",
+      name: "Feature",
       link: "#features",
     },
     {
