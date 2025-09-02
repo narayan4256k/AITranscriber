@@ -18,6 +18,7 @@ import {
 import { NavbarDemo } from "./_components/navbar";
 import { TextGenerateEffectDemo } from "./_components/Subheading";
 import { FlipWordsDemo } from "./_components/flipword";
+import { Footer } from "./_components/footer";
 
 export default function Home() {
   const navItems = [
@@ -32,12 +33,15 @@ export default function Home() {
     <div className="rounded-none bg-slate-950">
       <NavbarDemo/>
       <LampDemo />
-      <div className="flex justify-center items-center relative top-10 left-7 ">
+      <div id="about-section" className="flex justify-center items-center relative top-10  ">
           <TextGenerateEffectDemo />
         </div>
       <TextRevealCardPreview />
       <FlipWordsDemo/>
+      <div id="features">
       <StickyScrollRevealDemo />
+      <Footer/>
+      </div>
     </div>
   );
 }

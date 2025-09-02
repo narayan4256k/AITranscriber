@@ -3,6 +3,7 @@
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 
 export function TypewriterEffectSmoothDemo() {
   const words = [
@@ -25,10 +26,21 @@ export function TypewriterEffectSmoothDemo() {
       )}
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
         <button className="w-40 h-10 rounded-xl bg-blue-600 hover:bg-blue-800 dark:border-white border-transparent hover:scale-110 transition-all cursor-pointer text-white text-sm">
-          Join now
+          Get Started
         </button>
-        <button className="w-40 h-10 rounded-xl bg-white text-black border border-black hover:bg-gray-300 hover:scale-110 transition-all cursor-pointer text-sm">
-          Signup
+        <button
+          onClick={() => {
+            const section = document.getElementById("about-section");
+            if (section) {
+              const yOffset = -120; // adjust this value to match navbar height
+              const y =
+                section.getBoundingClientRect().top + window.scrollY + yOffset;
+              window.scrollTo({ top: y, behavior: "smooth" });
+            }
+          }}
+          className="w-40 h-10 rounded-xl bg-white text-black border border-black hover:bg-gray-300 hover:scale-110 transition-all cursor-pointer text-sm"
+        >
+          Know More
         </button>
       </div>
     </div>
