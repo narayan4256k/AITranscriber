@@ -25,9 +25,11 @@ export function TypewriterEffectSmoothDemo() {
         <TypewriterEffectSmooth key={String(isInView)} words={words} />
       )}
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-        <button className="w-40 h-10 rounded-xl bg-blue-600 hover:bg-blue-800 dark:border-white border-transparent hover:scale-110 transition-all cursor-pointer text-white text-sm">
-          Get Started
-        </button>
+        <Link href={"/options"}>
+          <button className="w-40 h-10 rounded-xl bg-blue-600 hover:bg-blue-800 dark:border-white border-transparent hover:scale-110 transition-all cursor-pointer text-white text-sm">
+            Get Started
+          </button>
+        </Link>
         <button
           onClick={() => {
             const section = document.getElementById("about-section");
